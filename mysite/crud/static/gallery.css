@@ -1,0 +1,12 @@
+body{
+    background-color: rgb(178, 221, 207);
+}
+
+
+[class^="row "]{
+    padding: 1rem;
+    background-color: rgb(224, 178, 178);
+    border: 2px solid rgb(65, 53, 53);
+    color: black;
+    /* height: 100px; */
+}

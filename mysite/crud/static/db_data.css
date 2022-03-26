@@ -1,0 +1,21 @@
+body{
+    background-color: rgb(221, 178, 202);
+}
+
+
+[class^="row "]{
+    padding: 1rem;
+    background-color: white;
+    border: 1px solid rgb(65, 53, 53);
+    color: black;
+    /* height: 100px; */
+}
+
+[class*="row "]:hover{
+    border: 3px solid #333333;
+    overflow: hidden;        
+}
+
+#linegap{
+    text-indent: 4em;
+}

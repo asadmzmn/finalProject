@@ -1,0 +1,85 @@
+body{
+    background-color: #eeede4;;
+}
+h2{
+    text-align: center;
+    margin: 20px;
+}
+
+.top_sect{
+    margin: 20px 0 0 0;
+}
+
+.leftside h3, .rightside h3{
+    margin-left: 2%;
+    margin-bottom: 20px;
+}
+
+.line {
+    width:5%;
+    margin: auto;
+    border: none;
+    border-top: 3px solid red;
+ }
+
+.leftside{
+    float: left;
+    width: 40%;
+    padding: 10px;
+    margin-left:10%;
+    margin-bottom:5%
+}
+
+.rightside{
+    float:right;
+    width: 40%;
+    padding: 10px;
+    margin-right: 10%;
+    margin-bottom:5%
+}
+
+.edu_1, .edu_2, .exp_1, .exp_2{
+    border: 0px solid #0198fa;
+    margin: 10px;
+    padding: 20px;
+    background-color: white;
+}
+
+.edu_1:hover, .edu_2:hover, .exp_1:hover, .exp_2:hover {
+    border: 3px solid #0198fa;
+  }
+
+
+.user_input{
+    float: left;
+    width: 40%;
+    padding: 15px;
+    margin-left:10%;    
+}
+
+.contact{
+    float:right;
+    width: 40%;
+    padding: 15px;
+    margin-right: 10%;
+}
+
+.mid_sect{
+    float: left;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 5%;
+
+}
+
+#cont5{
+    color: rgba(0, 0, 0, 0.6);
+}
+
+#text_e{
+    color: rgba(0, 0, 0, 0.6);
+}
+
+h6{
+    font-size: 0.75em;
+}

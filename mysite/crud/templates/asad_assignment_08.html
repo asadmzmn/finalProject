@@ -1,0 +1,117 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <div class="top_sect">
+        <hr class="line">
+    </div>
+    <h2>My <b>Resume</b></h2>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static 'asad_assignment_08.css' %}" />
+</head>
+
+<body>
+
+    <div class="leftside">
+        <h3>Education</h3>
+        <div class="edu_1">
+            <div class="card-body">
+                <h6 class="card-subtitle mb-2 text-muted">{{primary_education.duration}}</h6>
+                <h4 class="card-title">{{primary_education.institute}}</h4>
+                <p id="text_e">{{primary_education.tagline}}</p>
+                <h5>{{primary_education.address}}</h5>
+     
+            </div>
+        </div>
+        <div class="edu_2">
+            <div class="card-body">
+                <h6 class="card-subtitle mb-2 text-muted">{{secondary_education.duration|linebreaks}}</h6>
+                <h4 class="card-title">{{secondary_education.institute}}</h4>
+                <p id="text_e">{{secondary_education.tagline}}</p>
+                <h5>{{secondary_education.address}}</h5>
+            </div>
+        </div>
+    </div>
+
+    <div class="rightside">
+        <h3>Experience</h3>
+        <div class="exp_1">
+            <div class="card-body">
+                <h6 class="card-subtitle mb-2 text-muted">{{experinece_1.duration}}</h6>
+                <h4 class="card-title">{{experinece_1.post}}</h4>
+                <p id="text_e">{{experinece_1.experience}}</p>
+                <h5>{{experinece_1.address}}</h5>
+            </div>
+        </div>
+        <div class="exp_2">
+            <div class="card-body">
+                <h6 class="card-subtitle mb-2 text-muted">{{experience_2.duration}}</h6>
+                <h4 class="card-title">{{experience_2.post}}</h4>
+                <p id="text_e">{{experience_2.experience}}</p>
+                <h5>{{experience_2.address}}</h5>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container my-6">
+        <div class="row my-6">
+            {% for value in experience %}
+            <p>Company: {{value.duration}}</p>
+
+            {% endfor %}
+        </div>
+    </div>
+
+
+    <div>
+        {% for value in experience %}
+        <p>Company: {{value.duration}}</p>
+
+        {% endfor %}
+    </div>
+
+
+    <div class="mid_sect">
+        <hr class="line">
+        <h2>Wanna <b>Start Work</b>With Me?</h2>
+    </div>
+    <div class="user_input">
+        <h3>Information Please</h3>
+        <div class="mb-3">
+            <input type="name" class="form-control" id="exampleFormControlInput1" placeholder="Your Name">
+        </div>
+        <div class="mb-3">
+            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Your Email">
+        </div>
+        <div class="mb-3">
+            <input type="phone" class="form-control" id="exampleFormControlInput1" placeholder="Your Phone">
+        </div>
+        <div class="mb-3">
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="6"
+                placeholder="Write a Message"></textarea>
+        </div>
+        <div>
+            <button type="button" class="btn btn-primary">Submit</button>
+        </div>
+    </div>
+
+    <div class="contact">
+        <h3>My Contact Details</h3>
+        <div>
+            <p>EMAIL</p>
+            <p id="cont5">{{contact_details.email}}</p>
+            <p>PHONE</p>
+            <p id="cont5">{{contact_details.phone}}</p>
+            <p>ADDRESS</p>
+            <p id="cont5">{{contact_details.address|linebreaks}}</p>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>

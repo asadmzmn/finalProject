@@ -1,0 +1,23 @@
+body{
+    background-color: rgb(245, 240, 240);
+}
+
+.col-6{
+    padding-right: 35px;
+}
+
+
+
+[class^="row "]{
+    padding: 2rem;
+    background-color: white;
+    border: 3px solid white;
+    color: black;
+    height: 300px;
+}
+
+[class*="row "]:hover{
+    border: 3px solid #333333;
+    overflow: hidden;        
+}
+
