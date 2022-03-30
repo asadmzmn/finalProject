@@ -1,12 +1,29 @@
 from django.shortcuts import redirect, render
-from django.contrib.auth.models import User
+from django.contrib.auth.models import User, auth
 from django.contrib import messages
 
 # Create your views here.
 
 
 def loginPage(request):
-    return render(request, 'html/login.html')
+    if request.method == "GET":
+        return render(request, 'html/login.html')
+
+    elif request.method == "POST":
+        # print(request.POST)
+        userName = request.POST["user_name"]
+        password = request.POST["password"]
+
+        user = auth.authenticate(username=userName, password=password)
+
+        if user is not None:
+            auth.login(request, user)
+            messages.success(request, "Login Succesfully")
+            return redirect('allblog')
+        else:
+            messages.error(request, "Invalid user name and password")
+            return redirect('loginpage')
+
 
 def registerPage(request):
     if request.method == "GET":
